@@ -17,14 +17,12 @@ init: function () {
 var elem = document.documentElement;
 var marker = document.querySelector("#marker");
 var fullbutton = document.querySelector("#fullscreen");
-var Model_0 = document.querySelector("#Model_0");
 marker.addEventListener("markerFound", function (evt) {
 markerFound = 1;
 });
 marker.addEventListener("markerLost", function (evt) {
 markerFound = 0;
 });
-
 
         fullbutton.addEventListener("click", function (evt) {
             if (fullscreen == 0) {
@@ -100,8 +98,8 @@ if (markerFound == 1) {
 
 <!-- BEGIN: Unity Compiled Assets -->
 <a-assets>
-<a-asset-item id="Model_Asset_obj_0" src="models/Facebook Button.obj"></a-asset-item>
-<a-asset-item id="Model_Asset_mtl_0" src="models/Facebook_Button.mtl"></a-asset-item>
+<a-asset-item id="Model_Asset_obj_3" src="models/Facebook Button.obj"></a-asset-item>
+<a-asset-item id="Model_Asset_mtl_3" src="models/Facebook_Button.mtl"></a-asset-item>
 
 </a-assets>
 <!-- END: Unity Compiled Assets -->
@@ -110,14 +108,14 @@ if (markerFound == 1) {
 <!-- END: Add Image Target (marker) -->
 
 <!-- BEGIN: Unity Compiled Objects -->
-<a-entity obj-model="obj: #Model_Asset_obj_0; mtl: #Model_Asset_mtl_0" scale="0.1 0.1 0.1" class="intersectable" position="0 0 0" rotation="0 0 0" color="#FFFFFF" 
-></a-entity>
 <a-box width="2.945828" height="0.1" depth="0.1" class="intersectable" position="0 0.27 0.919" rotation="0 0 0" color="#FFFFFF" 
 ></a-box>
 <a-box width="2.945828" height="0.1" depth="0.1" class="intersectable" position="0.85 0.27 -0.49" rotation="0 -60.39486 0" color="#FFFFFF" 
 ></a-box>
 <a-box width="2.945828" height="0.1" depth="0.1" class="intersectable" position="-0.8 0.27 -0.48" rotation="0 -299.605 0" color="#FFFFFF" 
 ></a-box>
+<a-entity obj-model="obj: #Model_Asset_obj_3; mtl: #Model_Asset_mtl_3" scale="0.9 0.9 0.9" class="intersectable" position="-0.451 0.689 -0.455" rotation="0 -180 0" color="#FFFFFF" 
+></a-entity>
 <!-- END: Unity Compiled Objects -->
 
 <!-- BEGIN: Bottom HTML -->
