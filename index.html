@@ -24,11 +24,29 @@ markerFound = 1;
 marker.addEventListener("markerLost", function (evt) {
 markerFound = 0;
 });
-Model_3.addEventListener("touchstart", function(){
-open("https://www.google.com");
+Model_3.addEventListener("click", function(evt){
+open("https://www.google.com");  
 });
 
-        fullbutton.addEventListener("click", function (evt) {
+    
+     
+Model_3.addEventListener( 'touchstart', function( evt ) {
+    window.open( "https://www.google.com");
+}),     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        fullbutton.addEventListener("touchstart", function (evt) {
             if (fullscreen == 0) {
                 if (elem.requestFullscreen) {
                     elem.requestFullscreen();
