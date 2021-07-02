@@ -24,7 +24,7 @@ markerFound = 1;
 marker.addEventListener("markerLost", function (evt) {
 markerFound = 0;
 });
-Model_3.addEventListener("ontouchstart", function(evt){
+Model_3.addEventListener("touchstart", function(evt){
 open("https://www.google.com");
 });
 
@@ -97,7 +97,9 @@ if (markerFound == 1) {
 
         <!-- <a-scene embedded arjs='debugUIEnabled: false; sourceType: video; sourceUrl:../../data/videos/headtracking.mp4;'> -->
             <a-scene embedded arjs='debugUIEnabled: false; sourceType: webcam' vr-mode-ui='enabled: false'>
-            <a-entity id="mouseCursor" cursor="rayOrigin: mouse" raycaster="objects: .intersectable; useWorldCoordinates: true;"></a-entity>
+            <a-entity id="mouseCursor" cursor=" fuse: false; rayOrigin: mouse" raycaster="objects: .intersectable; useWorldCoordinates: true;"></a-entity>
+            
+                
 <!-- END: Middle HTML -->
 
 <!-- BEGIN: Unity Compiled Assets -->
@@ -128,4 +130,3 @@ if (markerFound == 1) {
 </a-scene>
 </body>
 </html><!-- END: Bottom HTML -->
-
