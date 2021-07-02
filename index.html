@@ -17,16 +17,18 @@ init: function () {
 var elem = document.documentElement;
 var marker = document.querySelector("#marker");
 var fullbutton = document.querySelector("#fullscreen");
-var Model_3 = document.querySelector("#marker");
+var Model_3 = document.querySelector("#Model_3");
 marker.addEventListener("markerFound", function (evt) {
 markerFound = 1;
 });
 marker.addEventListener("markerLost", function (evt) {
 markerFound = 0;
 });
-<!-- Model_3.addEventListener("click", function(evt){
-open("https://www.google.com");-->   
-});
+Model_3.addEventListener("click", myFunction);    
+function myFunction() {
+  open("https://www.google.com");
+}
+
 
         fullbutton.addEventListener("click", function (evt) {
             if (fullscreen == 0) {
@@ -108,7 +110,7 @@ if (markerFound == 1) {
 </a-assets>
 <!-- END: Unity Compiled Assets -->
 <!-- BEGIN: Add Image Target (marker) -->
-
+<a-marker id="marker" preset="hiro" emitevents="true" button>
 <!-- END: Add Image Target (marker) -->
 
 <!-- BEGIN: Unity Compiled Objects -->
@@ -118,7 +120,6 @@ if (markerFound == 1) {
 ></a-box>
 <a-box width="2.945828" height="0.1" depth="0.1" class="intersectable" position="-0.8 0.27 -0.48" rotation="0 -299.605 0" color="#FFFFFF" 
 ></a-box>
-<a-marker id="marker" preset="hiro" emitevents="true" button>
 <a-entity id="Model_3" obj-model="obj: #Model_Asset_obj_3; mtl: #Model_Asset_mtl_3" scale="0.9 0.9 0.9" class="intersectable" position="-0.451 0.689 -0.455" rotation="0 -180 0" color="#FFFFFF" 
 ></a-entity>
 <!-- END: Unity Compiled Objects -->
