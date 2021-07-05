@@ -25,11 +25,11 @@
     markerFound = 0;
     });
     
-    const marker = document.querySelector("#marker");
+    const marker2 = document.querySelector("#marker");
     const aEntity = document.querySelector("#Model_0");
 
     // every click, we make our model grow in size :)
-    marker.addEventListener('click', function(ev, target){
+    marker2.addEventListener('click', function(ev, target){
     const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
         if (aEntity && intersectedElement === aEntity) {
              open("https://www.facebook.com/");
@@ -135,3 +135,4 @@
         </a-scene>
 </body>
 </html><!-- END: Bottom HTML -->
+
