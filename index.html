@@ -12,7 +12,7 @@
 <!-- BEGIN: Unity Compiled Events -->
 <script>
     var markerFound = 0;
-    AFRAME.registerComponent('markerhandler', {
+    AFRAME.registerComponent('button', {
     init: function () {
     var elem = document.documentElement;
     var marker = document.querySelector("#marker");
@@ -29,7 +29,7 @@
     const aEntity = document.querySelector("#Model_0");
 
     // every click, we make our model grow in size :)
-    marker2.addEventListener('click', function(ev, target){
+    marker2.addEventListener('touchstart', function(ev, target){
     const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
         if (aEntity && intersectedElement === aEntity) {
              open("https://www.facebook.com/");
@@ -105,7 +105,7 @@
 
         <!-- <a-scene embedded arjs='debugUIEnabled: false; sourceType: video; sourceUrl:../../data/videos/headtracking.mp4;'> -->
         <a-scene embedded arjs='debugUIEnabled: false; sourceType: webcam' vr-mode-ui='enabled: false'>
-                <!--<a-entity id="mouseCursor" cursor="rayOrigin: mouse" raycaster="objects: .intersectable; useWorldCoordinates: true;"></a-entity>-->
+                <a-entity id="mouseCursor" cursor="rayOrigin: mouse" raycaster="objects: .intersectable; useWorldCoordinates: true;"></a-entity>
                 <!-- END: Middle HTML -->
 
                 <!-- BEGIN: Unity Compiled Assets -->
@@ -116,8 +116,7 @@
                 </a-assets>
                 <!-- END: Unity Compiled Assets -->
                 <!-- BEGIN: Add Image Target (marker) -->
-                <!--<a-marker id="marker" preset="hiro" emitevents="true" button>-->
-                <a-marker markerhandler emitevents="true"  id="marker" preset="hiro" emitevents="true" raycaster="objects: .intersectable; useWorldCoordinates: true;">
+                <a-marker id="marker" preset="hiro" emitevents="true" button>
                 <!-- END: Add Image Target (marker) -->
 
                 <!-- BEGIN: Unity Compiled Objects -->
