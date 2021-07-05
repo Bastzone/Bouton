@@ -25,14 +25,15 @@
     markerFound = 0;
     });
     
-    const marker2 = document.querySelector("#marker");
     const aEntity = document.querySelector("#Model_0");
 
     // every click, we make our model grow in size :)
-    marker2.addEventListener('touchstart', function(ev, target){
+    marker.addEventListener('touchstart', function(ev, target){
     const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
         if (aEntity && intersectedElement === aEntity) {
-             open("https://www.facebook.com/");
+             const scale = aEntity.getAttribute('scale');
+                Object.keys(scale).forEach((key) => scale[key] = scale[key] + 1);
+                aEntity.setAttribute('scale', scale);
         }
     });
 
@@ -135,3 +136,4 @@
         </a-scene>
 </body>
 </html><!-- END: Bottom HTML -->
+
